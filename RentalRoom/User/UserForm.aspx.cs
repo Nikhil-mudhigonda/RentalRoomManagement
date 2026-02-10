@@ -27,6 +27,7 @@ namespace RentalRoom.User
             {
                 string query = "SELECT RoomId, Room_Name FROM Room where isActive = 1";
                 conn.Open();
+                
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -41,21 +42,23 @@ namespace RentalRoom.User
         {
             using(SqlConnection conn = DbHelper.GetConnection())
             {
-                int roomid = DropDownRoomList.SelectedIndex;
+                int roomid = Convert.ToInt32(DropDownRoomList.SelectedValue);
                 int GuestCount = int.Parse(SelectedGuestTxt.Text);
                 int Duration = int.Parse(DurationTxt.Text);
 
-                string query = "select dr.priceperperson from discountrule dr join rdr.roomdiscountrule on dr.discountid = rdr.discountid where rdr.roomid = @roomid and dr.mindays <= @days and(dr.maxdays = 0 or dr.MaxDays >= @days) and guestcount = @guestcount";
+                string query = "select dr.priceperperson from discountrule dr join RoomDiscountRule rdr on dr.discountid = rdr.discountid where rdr.roomid = @roomid and dr.mindays <= @days and(dr.maxdays = 0 or dr.MaxDays >= @days) and guestcount = @guestcount";
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@roomid", roomid);
+                 cmd.Parameters.AddWithValue("@roomid", roomid);
                 cmd.Parameters.AddWithValue("@guestcount", GuestCount);
                 cmd.Parameters.AddWithValue("@days", Duration);
                 conn.Open();
-                decimal CalculatedPrice = (decimal)cmd.ExecuteScalar();
-                
+                cmd.CommandTimeout = 120; // Set the command timeout to 60 seconds
+                int Price = Convert.ToInt32(cmd.ExecuteScalar());
+                double CalculatedPrice = Price * GuestCount * Duration;
+
                 if (CalculatedPrice > 0)
                 {
-                    PriceDescriptionlbl.Text = $"The price for {GuestCount} guests for {Duration} days is: \"\\u20AC \"{CalculatedPrice}";
+                    PriceDescriptionlbl.Text = $"The price for {GuestCount} guests for {Duration} days is: € {CalculatedPrice}";
                 }
                 else
                 {

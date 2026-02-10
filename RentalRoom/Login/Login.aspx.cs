@@ -30,7 +30,7 @@ namespace RentalRoom.Login
                 cmd.Parameters.AddWithValue("@Password", Utilities.PasswordHelper.HashPassword(PasswordBox.Text.Trim()));
                 string str = Utilities.PasswordHelper.HashPassword(Password.Text);
                 conn.Open();
-
+                cmd.CommandTimeout = 60;
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
@@ -43,7 +43,7 @@ namespace RentalRoom.Login
                     }
                     else
                     {
-                        Response.Redirect("/User/PriceCalculator.aspx");
+                        Response.Redirect("/User/UserForm.aspx");
                     }
                 }
                 else
