@@ -48,7 +48,7 @@ namespace RentalRoom.Login
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
-            Errorlbl.Text = "";
+            Errorlbl.Text = "Successfully Signed In, Please login";
         }
     }
 }
