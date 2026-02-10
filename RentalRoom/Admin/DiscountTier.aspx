@@ -28,16 +28,18 @@
             <br />
             <asp:Label ID="PricePerPersonlbl" runat="server" Text="PricePerPerson"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="PricePerPersonTxt" runat="server" ReadOnly="True"></asp:TextBox>
+            <asp:TextBox ID="PricePerPersonTxt" runat="server"></asp:TextBox>
             <br />
             <br />
             <br />
             <asp:Button ID="AddBtn" runat="server" OnClick="AddBtn_Click" Text="Add" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="UpdateBtn" runat="server" OnClick="UpdateBtn_Click" Text="Update" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="DeleteBtn" runat="server" OnClick="DeleteBtn_Click" Text="Delete" />
             <br />
             <br />
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateSelectButton="True" CellPadding="10">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateSelectButton="True" CellPadding="10" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             </asp:GridView>
         </div>
     </form>

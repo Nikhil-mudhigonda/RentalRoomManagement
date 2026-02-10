@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RentalRoom.Admin
+namespace RentalRoom.User
 {
 
 
-    public partial class DiscountTier
+    public partial class UserForm
     {
 
         /// <summary>
@@ -24,111 +24,75 @@ namespace RentalRoom.Admin
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// MinDayslbl control.
+        /// Roomlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MinDayslbl;
+        protected global::System.Web.UI.WebControls.Label Roomlbl;
 
         /// <summary>
-        /// MinDaysTxt control.
+        /// DropDownRoomList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MinDaysTxt;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownRoomList;
 
         /// <summary>
-        /// MaxDayslbl control.
+        /// Guestslbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MaxDayslbl;
+        protected global::System.Web.UI.WebControls.Label Guestslbl;
 
         /// <summary>
-        /// MaxDaysTxt control.
+        /// SelectedGuestTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MaxDaysTxt;
+        protected global::System.Web.UI.WebControls.TextBox SelectedGuestTxt;
 
         /// <summary>
-        /// GuestCountlbl control.
+        /// Durationlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label GuestCountlbl;
+        protected global::System.Web.UI.WebControls.Label Durationlbl;
 
         /// <summary>
-        /// GuestCountBox control.
+        /// DurationTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox GuestCountBox;
+        protected global::System.Web.UI.WebControls.TextBox DurationTxt;
 
         /// <summary>
-        /// PricePerPersonlbl control.
+        /// PriceDescriptionlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PricePerPersonlbl;
+        protected global::System.Web.UI.WebControls.Label PriceDescriptionlbl;
 
         /// <summary>
-        /// PricePerPersonTxt control.
+        /// GetPricelbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PricePerPersonTxt;
-
-        /// <summary>
-        /// AddBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddBtn;
-
-        /// <summary>
-        /// UpdateBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button UpdateBtn;
-
-        /// <summary>
-        /// DeleteBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button DeleteBtn;
-
-        /// <summary>
-        /// GridView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Button GetPricelbl;
     }
 }
