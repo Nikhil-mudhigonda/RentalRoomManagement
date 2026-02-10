@@ -28,7 +28,7 @@
         <p>
             <asp:Button ID="SignInBtn" runat="server" OnClick="SignInBtn_Click" Text="SignIn" />
             <asp:Label ID="Label1" runat="server" Text="already signin? please "></asp:Label>
-            <asp:Button ID="LoginBtn" runat="server" Text="Login" />
+            <asp:Button ID="LoginBtn" runat="server" Text="Login" OnClick="LoginBtn_Click" />
             <asp:Label ID="Label2" runat="server" Text="  here"></asp:Label>
         </p>
         <p>

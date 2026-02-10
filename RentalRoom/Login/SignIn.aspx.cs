@@ -44,11 +44,17 @@ namespace RentalRoom.Login
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@Username", Username.Text);
                 cmd.Parameters.AddWithValue("@Password", PasswordHelper.HashPassword(Password.Text));
+                string str1 = PasswordHelper.HashPassword(Password.Text);
                 cmd.Parameters.AddWithValue("@Role", RoleButtonList1.SelectedValue);
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
             Errorlbl.Text = "Successfully Signed In, Please login";
+        }
+
+        protected void LoginBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
     }
 }
