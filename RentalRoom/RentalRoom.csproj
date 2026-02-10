@@ -67,12 +67,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\DiscountTier.aspx" />
     <Content Include="Admin\Room.aspx" />
     <Content Include="Login\Login.aspx" />
     <Content Include="Login\SignIn.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\DiscountTier.aspx.cs">
+      <DependentUpon>DiscountTier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\DiscountTier.aspx.designer.cs">
+      <DependentUpon>DiscountTier.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Room.aspx.cs">
       <DependentUpon>Room.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

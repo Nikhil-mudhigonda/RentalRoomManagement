@@ -11,7 +11,7 @@ namespace RentalRoom.Admin
 {
 
 
-    public partial class Room
+    public partial class DiscountTier
     {
 
         /// <summary>
@@ -24,58 +24,76 @@ namespace RentalRoom.Admin
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// RoomIbl control.
+        /// MinDayslbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label RoomIbl;
+        protected global::System.Web.UI.WebControls.Label MinDayslbl;
 
         /// <summary>
-        /// RoomTextBox control.
+        /// MinDaysTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RoomTextBox;
+        protected global::System.Web.UI.WebControls.TextBox MinDaysTxt;
 
         /// <summary>
-        /// BasePricelbl control.
+        /// MaxDayslbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label BasePricelbl;
+        protected global::System.Web.UI.WebControls.Label MaxDayslbl;
 
         /// <summary>
-        /// BasePriceTxtBox control.
+        /// MaxDaysTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BasePriceTxtBox;
+        protected global::System.Web.UI.WebControls.TextBox MaxDaysTxt;
 
         /// <summary>
-        /// isActivelbl control.
+        /// GuestCountlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label isActivelbl;
+        protected global::System.Web.UI.WebControls.Label GuestCountlbl;
 
         /// <summary>
-        /// isActiveRadioBtn control.
+        /// GuestCountBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList isActiveRadioBtn;
+        protected global::System.Web.UI.WebControls.TextBox GuestCountBox;
+
+        /// <summary>
+        /// PricePerPersonlbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PricePerPersonlbl;
+
+        /// <summary>
+        /// PricePerPersonTxt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PricePerPersonTxt;
 
         /// <summary>
         /// AddBtn control.
@@ -94,24 +112,6 @@ namespace RentalRoom.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button UpdateBtn;
-
-        /// <summary>
-        /// DeleteId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button DeleteId;
-
-        /// <summary>
-        /// DiscountTierBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button DiscountTierBtn;
 
         /// <summary>
         /// GridView1 control.

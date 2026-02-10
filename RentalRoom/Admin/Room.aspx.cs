@@ -112,5 +112,10 @@ namespace RentalRoom.Admin
             BasePriceTxtBox.Text = "";
             isActiveRadioBtn.ClearSelection();
         }
+
+        protected void DiscountTierBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Admin/DiscountTier.aspx");
+        }
     }
 }
