@@ -25,6 +25,8 @@
         </asp:RadioButtonList>
         <br />
         <asp:Button ID="AddBtn" runat="server" OnClick="AddBtn_Click" Text="Add" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="UpdateBtn" runat="server" OnClick="UpdateBtn_Click" Text="Update" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="DeleteId" runat="server" OnClick="DeleteId_Click1" Text="Delete" />
         <br />

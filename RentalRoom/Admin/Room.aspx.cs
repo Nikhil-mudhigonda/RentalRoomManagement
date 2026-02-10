@@ -55,7 +55,7 @@ namespace RentalRoom.Admin
                         bool isActive = (bool)reader["isActive"];
                         isActiveRadioBtn.SelectedValue = isActive ? "1":"0";
                     }
-            }
+                }
             }
             
         }
@@ -73,6 +73,7 @@ namespace RentalRoom.Admin
                 cmd.ExecuteNonQuery();
             }
             LoadRooms();
+            ClearInputs();
         }
 
         protected void DeleteId_Click1(object sender, EventArgs e)
@@ -86,6 +87,30 @@ namespace RentalRoom.Admin
                 cmd.ExecuteNonQuery();
             }
             LoadRooms();
+        }
+
+        protected void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = DbHelper.GetConnection())
+            {
+                string query = "update Room set Room_Name = @RoomName, isActive = @isActive where RoomId = @RoomId";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@RoomId", Convert.ToInt32(GridView1.SelectedRow.Cells[1].Text));
+                cmd.Parameters.AddWithValue("@RoomName", RoomTextBox.Text);
+                cmd.Parameters.AddWithValue("@isActive", isActiveRadioBtn.SelectedValue);
+                cmd.Parameters.AddWithValue("@id", Convert.ToInt32(GridView1.SelectedRow.Cells[1].Text));
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+            LoadRooms();
+            ClearInputs();
+        }
+
+        protected void ClearInputs()
+        {
+            RoomTextBox.Text = "";
+            BasePriceTxtBox.Text = "";
+            isActiveRadioBtn.ClearSelection();
         }
     }
 }
