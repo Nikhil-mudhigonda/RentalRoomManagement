@@ -1,0 +1,12 @@
+-> Room Management (Admin)
+Admin should be able to:
+Add/Edit/Delete rooms
+
+Define: Base price per night
+	Discount tier based on: 1. length of stay 2. no.of guests
+
+-> price calculation (user)
+select a room
+enter no.of guests
+enter no.of days
+calculate total price
